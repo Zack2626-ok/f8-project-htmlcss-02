@@ -1,37 +1,37 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 :root {
     --primary-color: #FFB900;
     --font-heading: Sen, sans-serif;
-    
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 
-a{
+a {
     text-decoration: none;
 }
 
+
 /* =========== Common ============== */
+
 .main-content {
     width: 1100px;
-    max-width:  calc(100% - 170px);
+    max-width: calc(100% - 170px);
     margin-left: auto;
     margin-right: auto;
-    
 }
 
-.btn{
+.btn {
     display: inline-block;
     min-width: 118px;
     padding: 0 16px;
@@ -50,33 +50,75 @@ a{
     opacity: 0.9;
 }
 
+.heading {
+    font-family: var(--font-heading);
+    color: #171100;
+    font-weight: 700;
+    /* 117.241% */
+    letter-spacing: -0.02em;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+    /* 126.316% */
+}
+
+.desc {
+    color: #5F5B53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    line-clamp: var(--line-clamp, 1);
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+
 
 /* =========== Header ============== */
-.header{
+
+.header {
     background-color: #FFFCF4;
 }
 
 .header.fixed {
-   position: sticky;
+    position: sticky;
     top: -28px;
     z-index: 1;
 }
 
-.header .body { 
+.header .body {
     display: flex;
     align-items: center;
-    padding: 36px 0 8px ;
+    padding: 36px 0 8px;
 }
 
 .nav {
     margin-left: auto;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
 }
 
-.nav a{
+.nav a {
     position: relative;
     color: #5F5B53;
     font-size: 1.6rem;
@@ -84,13 +126,13 @@ a{
 }
 
 .nav a:hover,
-.nav li.active a{
+.nav li.active a {
     /* font-weight: 600; */
     text-shadow: 0.5px 0 0 currentColor;
     color: #171100;
 }
 
-.nav li.active a::after{
+.nav li.active a::after {
     content: '';
     position: absolute;
     bottom: 6px;
@@ -102,24 +144,26 @@ a{
     background: #171100;
 }
 
-.header .action{
+.header .action {
     margin-left: 49px;
 }
 
-.header .sign-up-btn{
+.header .sign-up-btn {
     min-width: 144px;
 }
+
 
 /* =========== Hero ============== */
 
 .hero {
-    padding-top: 56px;
+    padding: 56px 0 65px;
     background: #FFFCF4;
 }
 
 .hero .body {
     display: flex;
 }
+
 
 /* Hero left */
 
@@ -152,7 +196,7 @@ a{
     align-items: center;
 }
 
-.hero-summary .item + .item {
+.hero-summary .item+.item {
     margin-top: 22px;
 }
 
@@ -166,19 +210,19 @@ a{
     border-radius: 50%;
 }
 
-.hero-summary .item:nth-of-type(2) .icon{
+.hero-summary .item:nth-of-type(2) .icon {
     background: #FCEFFF;
 }
 
-.hero-summary .item:nth-of-type(3) .icon{
+.hero-summary .item:nth-of-type(3) .icon {
     background: #EBEAFF;
 }
 
-.hero-summary .info{
+.hero-summary .info {
     margin-left: 16px;
 }
 
-.hero-summary .label{
+.hero-summary .label {
     color: #5F5B53;
     font-size: 1.4rem;
     font-style: normal;
@@ -191,7 +235,8 @@ a{
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.66; /* 166.667% */
+    line-height: 1.66;
+    /* 166.667% */
 }
 
 
@@ -204,20 +249,10 @@ a{
 
 .content-block .heading {
     width: 470px;
-    font-family: var(--font-heading);
-    color: #171100;
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17; /* 117.241% */
-    letter-spacing: -1.16px;
 }
 
 .content-block .desc {
     margin-top: 22px;
-    color: #5F5B53;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 1.67; /* 166.667% */
 }
 
 .content-block .cta-group {
@@ -237,11 +272,11 @@ a{
     align-items: center;
     margin-left: 28px;
     border: none;
-    background: #FFF;
+    background: transparent;
     cursor: pointer;
 }
 
-.content-block .icon{
+.content-block .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,10 +293,11 @@ a{
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.67; /* 166.667% */
+    line-height: 1.67;
+    /* 166.667% */
 }
 
-.content-block .desc {
+.content-block .desc.stats {
     margin-top: 8px;
 }
 
@@ -272,13 +308,138 @@ a{
     font-family: var(--font-heading);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1.23; /* 122.727% */
+    line-height: 1.23;
+    /* 122.727% */
 }
+
 .content-block .stats strong:first-child {
     padding-left: 0;
 }
 
 
+/* Popular */
+
+.popular {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .desc {
+    width: 458px;
+    margin-top: 16px;
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    cursor: pointer;
+}
+
+.popular-top .control-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
 
 
+/* Courses List */
 
+.popular .courses-list {
+    margin-top: 55px;
+    gap: 30px;
+    display: flex;
+}
+
+.popular .courses-item {
+    flex: 1;
+    border-radius: 12px;
+    background: #FFF;
+    border: 1px solid #E2DFDA;
+    transition: box-shadow .25s;
+}
+
+.popular .courses-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .courses-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    object-position: 0 -2px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .courses-item .info {
+    margin: 16px 22px 22px;
+}
+
+.popular .courses-item .rating,
+.popular .courses-item .foot,
+.popular .courses-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .courses-item .title a {
+    color: #171100;
+    padding-right: 6px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .courses-item .value {
+    margin-left: 6px;
+    color: #FEA31B;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.popular .courses-item .desc {
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.popular .courses-item .foot {
+    margin-top: 12px;
+}
+
+.popular .foot .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .btn {
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.popular .btn:hover {
+    background: #FFB900;
+}
